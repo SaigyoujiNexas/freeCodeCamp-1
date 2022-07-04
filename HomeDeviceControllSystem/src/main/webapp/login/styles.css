@@ -1,0 +1,49 @@
+@import url("../bootstrap-5.2.0-beta1-dist/css");
+body{
+    width:100%;
+    margin:0;
+}
+h1{
+    text-align: center;
+    margin: 128px auto 20px auto;
+}
+div, form{
+    min-width: 100px;
+    max-width: 300px;
+    width: 60vw;
+    margin: 0 auto;
+}
+label{
+    display: block;
+    margin: 12px auto;
+}
+fieldset{
+    border-width: 0;
+}
+input{
+    min-height:2em;
+    margin: 10px auto 0 auto;
+    width: 100%;
+    display: block;
+    font-size: 1.1em;
+}
+button[id="submit_button"]{
+    margin: 0.6em auto;
+    display: block;
+}
+div{
+    margin-top: 20px;
+    width: 100%;
+}
+p{
+    width: auto;
+}
+.left{
+
+    float:left;
+    vertical-align: center;
+}
+.right{
+    float: right;
+    vertical-align: center;
+}
