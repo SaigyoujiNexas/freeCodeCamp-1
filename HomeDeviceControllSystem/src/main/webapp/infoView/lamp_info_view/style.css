@@ -1,0 +1,45 @@
+.progress-container{
+    width: 35%;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin: 20px auto 40px auto;
+}
+label, select{
+    display: block;
+    margin: 10px auto 10px auto;
+}
+label{
+    margin-left: 10px;
+    width: 75%;
+}
+select{
+    margin-left: 10px;
+    width: 40%;
+    display: inline-block;
+}
+input{
+    display: inline-block;
+    margin-right: 0;
+    margin-left: 10px;
+}
+#upButton, #downButton{
+    margin: 30px auto;
+    display: block;
+}
+.container{
+    max-width: 500px;
+    min-width: 300px;
+    width: 45%;
+    margin-top:75px;
+    border: 1px solid black;
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+}
+.center-container{
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}

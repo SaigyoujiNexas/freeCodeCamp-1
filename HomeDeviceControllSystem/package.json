@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "jest": "^28.1.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@material/slider": "^14.0.0",
+    "material-components-web": "^14.0.0"
+  }
+}

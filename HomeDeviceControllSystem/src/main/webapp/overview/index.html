@@ -3,6 +3,34 @@
 <head>
     <link type="text/css" rel="stylesheet" href="styles.css">
     <script src="../bootstrap-5.2.0-beta1-dist/js/bootstrap.js"></script>
+    <script>
+        function search(){
+            let url = "../overviewServlet"
+            let req = new XMLHttpRequest()
+            req.open("get", url, true);
+            req.sendRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            req.onreadystatechange = searchComplete;
+            req.send();
+        }
+        function searchComplete(){
+            var json = JSON.parse(req.responseText);
+            var container = document.getElementById("device-container");
+            var str = "";
+            for(i = 0; i < json.length; i++)
+            {
+                str = str + '<div className="card-body">\n' +
+                    '                    <p className="card-title">摄像头</p>\n' +
+                    '                    <p className="card-body">客厅</p>\n' +
+                    '                    <div className="form-check form-switch">\n' +
+                    '                        <input className="form-check-input" type="checkbox" role="switch"\n' +
+                    '                               id="flexSwithcCheckedDefault2">\n' +
+                    '                            <label className="form-check-label" htmlFor="flexSwithcCheckedDefault2">Switch</label>\n' +
+                    '                    </div>\n' +
+                    '                </div>'
+            }
+            container.innerHTML = str;
+        }
+    </script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -10,7 +38,7 @@
 <script type="text/javascript"
         src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">
 </script>
-    <nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">米家</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -25,12 +53,21 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="../searchAndAdd/index.html">添加设备</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="../manage/index.html">设备管理</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="../login/index.html">登出</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-<div>
+<div id="device-container">
     <div class="card" style="width: 200px; display: inline-block">
+        <a href="../infoView/lamp_info_view/index.html">
         <img src="https://img1.baidu.com/it/u=3787206773,3276397510&fm=253&fmt=auto&app=138&f=JPEG?w=250&h=250"
         alt="a lantern" class="card-img-top">
         <div class="card-body">
@@ -41,8 +78,10 @@
                 <label class="form-check-label" for="switch1">Switch</label>
             </div>
         </div>
+        </a>
     </div>
     <div class="card" style="width: 200px; display: inline-block" >
+        <a href="../infoView/lamp_info_view/index.html">
         <img src="https://img1.baidu.com/it/u=3787206773,3276397510&fm=253&fmt=auto&app=138&f=JPEG?w=250&h=250"
              alt="a lantern" class="card-img-top">
         <div class="card-body">
@@ -53,9 +92,10 @@
                 <label class="form-check-label" for="flexSwithcCheckedDefault">Switch</label>
             </div>
         </div>
+        </a>
     </div>
     <div class="card" style="width: 200px; display: inline-block; background:transparent" >
-        <a href="https://www.baidu.com">
+        <a href="../infoView/camera_info_view/index.html">
         <img src="https://img2.baidu.com/it/u=3147160823,1728017369&fm=253&fmt=auto&app=138&f=JPEG?w=514&h=500"
              alt="a lantern" class="card-img-top">
         <div class="card-body">

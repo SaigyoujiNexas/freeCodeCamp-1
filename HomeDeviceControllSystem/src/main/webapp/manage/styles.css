@@ -1,0 +1,22 @@
+@import url("../bootstrap-5.2.0-beta1-dist/css/bootstrap.css");
+
+a{
+    color: black;
+    text-decoration: none;
+    text-underline: none;
+}
+a:visited{
+    color: black;
+    text-decoration: none;
+    text-underline: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+    text-underline: none;
+}
+a:active{
+    color: black;
+    text-decoration: none;
+    text-underline: none;
+}
